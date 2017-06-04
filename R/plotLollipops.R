@@ -236,7 +236,9 @@ plotLollipops <- function(SNPs, feature.height, bottomHeight, baseline,
             if(jitter=="label"){
               ## add guide lines
               rased.height <- 4*GAP*cex
-              guide.height <- 2.5*GAP*cex
+#              guide.height <- 2.5*GAP*cex
+			guide.height <- 1*GAP*cex
+			print(guide.height)
               for(i in 1:length(SNPs)){
                 this.dashline.col <- 
                   if(length(SNPs[i]$dashline.col)>0) 

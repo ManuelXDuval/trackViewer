@@ -236,7 +236,6 @@ plotLollipops <- function(SNPs, feature.height, bottomHeight, baseline,
             if(jitter=="label"){
               ## add guide lines
               rased.height <- 4*GAP*cex
-#              guide.height <- 2.5*GAP*cex
 			guide.height <- 1*GAP*cex
 			print(guide.height)
               for(i in 1:length(SNPs)){
@@ -249,7 +248,8 @@ plotLollipops <- function(SNPs, feature.height, bottomHeight, baseline,
                            y=c(this.height+feature.height-cex*LINEW, 
                                this.height+feature.height+rased.height),
                            default.units = labels.default.units,
-                           gp=gpar(col=this.dashline.col, lty=3))
+						   ###EDITED lty valye to 10 instaed of 3
+                           gp=gpar(col=this.dashline.col, lty=10))
                 grid.lines(x=c(labels.x[i], labels.x[i]),
                            y=c(this.height+rased.height+feature.height,
                                this.height+rased.height+

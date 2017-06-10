@@ -32,10 +32,7 @@ plotFeatures <- function(feature.splited, LINEH, bottomHeight){
                 this.dat$color
             fill <- if(is.list(this.dat$fill)) this.dat$fill[[1]] else 
                 this.dat$fill
-            #this.cex <- if(length(this.dat$cex)>0) this.dat$cex[[1]][1] else 1
-            #JUNE10
-			this.dat$cex =1
-			#####
+            this.cex <- if(length(this.dat$cex)>0) this.dat$cex[[1]][1] else 1
 			this.feature.height.m <- 
                 if(length(this.dat$height)>0) 
                     this.dat$height[[1]][1] else 
@@ -156,7 +153,9 @@ plotLollipops <- function(SNPs, feature.height, bottomHeight, baseline,
             lwd <- if(is.list(this.dat$lwd)) this.dat$lwd[[1]] else this.dat$lwd
             id <- if(is.character(this.dat$label)) this.dat$label else NA
             id.col <- if(length(this.dat$label.col)>0) this.dat$label.col else "black"
-            this.cex <- if(length(this.dat$cex)>0) this.dat$cex[[1]][1]*cex else cex
+            #June10
+			this.cex <- if(length(this.dat$cex)>0) 0*cex else cex
+			#this.cex <- if(length(this.dat$cex)>0) this.dat$cex[[1]][1]*cex else cex
             this.dashline.col <- 
               if(length(this.dat$dashline.col)>0) this.dat$dashline.col[[1]][1] else dashline.col
             if(length(names(this.dat))<1) this.dashline.col <- NA

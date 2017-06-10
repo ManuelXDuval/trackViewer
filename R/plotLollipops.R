@@ -290,7 +290,10 @@ plotLegend <- function(legend, this.height, LINEH){
         }
         if(length(thisLabels)>0){
             ncol <- getColNum(thisLabels)
-            topblank <- ceiling(length(thisLabels) / ncol)
+            #JUNE10
+			print("zut")
+			
+			topblank <- ceiling(length(thisLabels) / ncol)
             pushViewport(viewport(x=.5, 
                                   y=ypos+(topblank+.5)*LINEH/2, 
                                   width=1,

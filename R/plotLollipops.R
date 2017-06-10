@@ -203,7 +203,8 @@ plotLollipops <- function(SNPs, feature.height, bottomHeight, baseline,
         }
         this.height <- getHeight(SNPs, 
                                  ratio.yx, LINEW, GAP, cex, type,
-                                 scoreMax=scoreMax,
+                                 #JUNE10
+								 #scoreMax=scoreMax,
                                  level="data")
         labels.rot <- 90
         if(length(names(SNPs))>0){

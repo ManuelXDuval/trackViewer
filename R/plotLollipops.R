@@ -144,9 +144,12 @@ plotLollipops <- function(SNPs, feature.height, bottomHeight, baseline,
                                        #height = 0,
 									   #height=scoreMax*LINEW*ratio.yx*cex,
                                        height=scoreMax*LINEW*ratio.yx*0,
+									   #yscale=c(scoreMax0+.5, 0)))
 									   yscale=c(scoreMax0+.5, 0)))
             }
-        }
+        #JUNE10
+		print(height)
+		}
         for(m in 1:length(SNPs)){
             this.dat <- SNPs[m]
             color <- if(is.list(this.dat$color)) this.dat$color[[1]] else this.dat$color

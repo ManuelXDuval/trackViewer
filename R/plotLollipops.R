@@ -142,8 +142,9 @@ plotLollipops <- function(SNPs, feature.height, bottomHeight, baseline,
                                        width=1,
 									   #JUNE10
                                        #height = 0,
-									   height=scoreMax*LINEW*ratio.yx*cex,
-                                       yscale=c(scoreMax0+.5, 0)))
+									   #height=scoreMax*LINEW*ratio.yx*cex,
+                                       height=scoreMax*LINEW*ratio.yx*0,
+									   yscale=c(scoreMax0+.5, 0)))
             }
         }
         for(m in 1:length(SNPs)){

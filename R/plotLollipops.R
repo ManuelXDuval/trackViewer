@@ -32,8 +32,11 @@ plotFeatures <- function(feature.splited, LINEH, bottomHeight){
                 this.dat$color
             fill <- if(is.list(this.dat$fill)) this.dat$fill[[1]] else 
                 this.dat$fill
-            this.cex <- if(length(this.dat$cex)>0) this.dat$cex[[1]][1] else 1
-            this.feature.height.m <- 
+            #this.cex <- if(length(this.dat$cex)>0) this.dat$cex[[1]][1] else 1
+            #JUNE10
+			this.dat$cex =1
+			#####
+			this.feature.height.m <- 
                 if(length(this.dat$height)>0) 
                     this.dat$height[[1]][1] else 
                         2*this.feature.height
@@ -185,9 +188,7 @@ plotLollipops <- function(SNPs, feature.height, bottomHeight, baseline,
                                                   start(this.dat)), 
                                            "native"), "npc", valueOnly=TRUE), 
                           y2=feature.height,
-						  y3=4*GAP*cex, 
-						  #JUNE10
-						  #y4=2.5*GAP*cex, 
+						  y3=4*GAP*cex,  
 						  y4=.1*GAP*cex,
                           radius=this.cex*LINEW/2,
                           col=color,

@@ -140,15 +140,9 @@ plotLollipops <- function(SNPs, feature.height, bottomHeight, baseline,
                                        y=1-(feature.height+5.25*GAP*cex+
                                            scoreMax*LINEW*ratio.yx/2*cex),
                                        width=1,
-									   #JUNE10
-                                       #height = 0,
-									   #height=scoreMax*LINEW*ratio.yx*cex,
                                        height=scoreMax*LINEW*ratio.yx*0,
-									   #yscale=c(scoreMax0+.5, 0)))
 									   yscale=c(scoreMax0+.5, 0)))
             }
-        #JUNE10
-		print(height)
 		}
         for(m in 1:length(SNPs)){
             this.dat <- SNPs[m]
@@ -200,8 +194,10 @@ plotLollipops <- function(SNPs, feature.height, bottomHeight, baseline,
                           type=type,
                           ratio.yx=ratio.yx,
                           pin=pin,
-                          scoreMax=(scoreMax-0.5) * LINEW * cex,
-                          scoreType=scoreType,
+                          #scoreMax=(scoreMax-0.5) * LINEW * cex,
+                          #JUNE10
+						  scoreMax=0,
+						  scoreType=scoreType,
                           id=id, id.col=id.col,
                           cex=this.cex, lwd=lwd, dashline.col=this.dashline.col,
                           side=side)

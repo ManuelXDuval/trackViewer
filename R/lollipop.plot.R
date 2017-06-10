@@ -169,6 +169,9 @@ lolliplot <- function(SNP.gr, features=NULL, ranges=NULL,
         scoreMax0 <- scoreMax <- 
             if(length(SNPs$score)>0) ceiling(max(c(SNPs$score, 1), na.rm=TRUE)) else 1
         if(type=="pie.stack") scoreMax <- length(unique(SNPs$stack.factor))
+		#JUNE10
+		print(scoreMax0)
+		print(scoreMax)
         if(!type %in% c("pie", "pie.stack")){
             if(length(yaxis)>1 && is.numeric(yaxis)){
                 if(length(names(yaxis))!=length(yaxis)){

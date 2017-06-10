@@ -1,3 +1,5 @@
+#labpos: location of the variant on the feature's x-axis
+
 convertHeight2NPCnum <- function(.ele){
     switch(class(.ele),
            "unit"=convertHeight(.ele, unitTo="npc", valueOnly=TRUE),
@@ -105,9 +107,6 @@ plotLollipops <- function(SNPs, feature.height, bottomHeight, baseline,
         condense.ids <- SNPs.condense$oid
         lab.pos <- rep(lab.pos.condense, elementNROWS(condense.ids))
         lab.pos <- lab.pos[order(unlist(condense.ids))]
-		##June8
-		print(lab.pos)
-		print(4:42)
     }else{
         lab.pos <- jitterLables(start(SNPs), 
                                 xscale=c(start(ranges), end(ranges)), 

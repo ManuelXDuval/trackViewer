@@ -185,7 +185,9 @@ plotLollipops <- function(SNPs, feature.height, bottomHeight, baseline,
                                                   start(this.dat)), 
                                            "native"), "npc", valueOnly=TRUE), 
                           y2=feature.height,
-                          y3=4*GAP*cex, y4=2.5*GAP*cex, 
+                          #JUNE10
+						  y3 = 0,
+						  #y3=4*GAP*cex, y4=2.5*GAP*cex, 
                           radius=this.cex*LINEW/2,
                           col=color,
                           border=border,
@@ -203,8 +205,7 @@ plotLollipops <- function(SNPs, feature.height, bottomHeight, baseline,
         }
         this.height <- getHeight(SNPs, 
                                  ratio.yx, LINEW, GAP, cex, type,
-                                 #JUNE10
-								 #scoreMax=scoreMax,
+								 scoreMax=scoreMax,
                                  level="data")
         labels.rot <- 90
         if(length(names(SNPs))>0){

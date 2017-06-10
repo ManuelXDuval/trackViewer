@@ -154,7 +154,7 @@ plotLollipops <- function(SNPs, feature.height, bottomHeight, baseline,
             id <- if(is.character(this.dat$label)) this.dat$label else NA
             id.col <- if(length(this.dat$label.col)>0) this.dat$label.col else "black"
             #June10
-			this.cex <- if(length(this.dat$cex)>0) 0*cex else cex
+			this.cex <- if(length(this.dat$cex)>0) 0.1*cex else cex
 			#this.cex <- if(length(this.dat$cex)>0) this.dat$cex[[1]][1]*cex else cex
             this.dashline.col <- 
               if(length(this.dat$dashline.col)>0) this.dat$dashline.col[[1]][1] else dashline.col

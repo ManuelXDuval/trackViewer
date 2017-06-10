@@ -185,7 +185,10 @@ plotLollipops <- function(SNPs, feature.height, bottomHeight, baseline,
                                                   start(this.dat)), 
                                            "native"), "npc", valueOnly=TRUE), 
                           y2=feature.height,
-						  y3=4*GAP*cex, y4=2.5*GAP*cex, 
+						  y3=4*GAP*cex, 
+						  #JUNE10
+						  #y4=2.5*GAP*cex, 
+						  y4=.1*GAP*cex,
                           radius=this.cex*LINEW/2,
                           col=color,
                           border=border,
@@ -290,8 +293,6 @@ plotLegend <- function(legend, this.height, LINEH){
         }
         if(length(thisLabels)>0){
             ncol <- getColNum(thisLabels)
-			#JUNE10
-			print("zut alors alors")
 			topblank <- ceiling(length(thisLabels) / ncol)
             pushViewport(viewport(x=.5, 
                                   y=ypos+(topblank+.5)*LINEH/2, 
@@ -306,6 +307,4 @@ plotLegend <- function(legend, this.height, LINEH){
             popViewport()
         }
     }
-    #June10
-	#this.height
 }

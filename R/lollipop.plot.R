@@ -111,6 +111,9 @@ lolliplot <- function(SNP.gr, features=NULL, ranges=NULL,
         LINEH <- as.numeric(convertY(unit(1, "line"), "npc"))
         ## GAP the gaps between any elements
         GAP <- .2 * LINEH
+		#June10
+		print(GAP)
+		print("Hello World")
         ratio.yx <- 1/as.numeric(convertX(unit(1, "snpc"), "npc"))
         
         ## prepare the feature

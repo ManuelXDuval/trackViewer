@@ -194,9 +194,7 @@ plotLollipops <- function(SNPs, feature.height, bottomHeight, baseline,
                           type=type,
                           ratio.yx=ratio.yx,
                           pin=pin,
-                          #scoreMax=(scoreMax-0.5) * LINEW * cex,
-                          #JUNE10
-						  scoreMax=0,
+                          scoreMax=(scoreMax-0.5) * LINEW * cex,
 						  scoreType=scoreType,
                           id=id, id.col=id.col,
                           cex=this.cex, lwd=lwd, dashline.col=this.dashline.col,
@@ -262,7 +260,8 @@ plotLollipops <- function(SNPs, feature.height, bottomHeight, baseline,
                            gp=gpar(col=this.dashline.col, lty=3))
               }
               ## add this height
-              this.height <- this.height + rased.height + guide.height
+			  #June10
+              #this.height <- this.height + rased.height + guide.height
             }
             grid.text(x=labels.x, y=this.height + feature.height, 
                       label = labels.text,  

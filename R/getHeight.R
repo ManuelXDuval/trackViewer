@@ -95,10 +95,14 @@ getHeight <- function(SNPs, ratio.yx, LINEW, GAP, cex, type, scoreMax,
                        maxStrHeight <- 0
                    }
                    maxStrHeight <- maxStrHeight * labels.length.rate
-                   ypos <- LINEW*max(ratio.yx, 1.2) + 
-                       6.5*GAP*cex + maxStrHeight*cex +
-                       (scoreMax-0.5) * LINEW * ratio.yx*cex
-               }
+                   #ypos <- LINEW*max(ratio.yx, 1.2) + 
+                   #    6.5*GAP*cex + maxStrHeight*cex +
+                   #    (scoreMax-0.5) * LINEW * ratio.yx*cex
+					#Hune10
+					ypos <- LINEW*max(ratio.yx, 1.2) + 
+                     6.5*GAP*0 + maxStrHeight*0 +
+                     (scoreMax-0.5) * LINEW * ratio.yx*cex
+			   }
         )
         ypos
     }

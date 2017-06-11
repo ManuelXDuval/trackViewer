@@ -153,8 +153,6 @@ plotLollipops <- function(SNPs, feature.height, bottomHeight, baseline,
             lwd <- if(is.list(this.dat$lwd)) this.dat$lwd[[1]] else this.dat$lwd
             id <- if(is.character(this.dat$label)) this.dat$label else NA
             id.col <- if(length(this.dat$label.col)>0) this.dat$label.col else "black"
-            #June10
-			#this.cex <- if(length(this.dat$cex)>0) 0.1*cex else cex
 			this.cex <- if(length(this.dat$cex)>0) this.dat$cex[[1]][1]*cex else cex
             this.dashline.col <- 
               if(length(this.dat$dashline.col)>0) this.dat$dashline.col[[1]][1] else dashline.col
@@ -168,7 +166,7 @@ plotLollipops <- function(SNPs, feature.height, bottomHeight, baseline,
                                      "id.col", "stack.factor", "SNPsideID"), 
                                drop=FALSE]
 			#June10
-			print(this.cex)
+			#print(this.cex)
 			print(this.dat.mcols)
             if(type!="pie.stack"){
                 this.dat.mcols <- 
@@ -266,8 +264,7 @@ plotLollipops <- function(SNPs, feature.height, bottomHeight, baseline,
                            gp=gpar(col=this.dashline.col, lty=3))
               }
               ## add this height
-			  #June10
-              #this.height <- this.height + rased.height + guide.height
+              this.height <- this.height + rased.height + guide.height
             }
             grid.text(x=labels.x, y=this.height + feature.height, 
                       label = labels.text,  

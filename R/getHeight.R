@@ -26,12 +26,9 @@ getHeight <- function(SNPs, ratio.yx, LINEW, GAP, cex, type, scoreMax,
                        6.5*GAP*cex + 0.5 * LINEW * ratio.yx * cex
                },
                pie.stack={
-                   #labels.y <- LINEW*max(ratio.yx, 1.2) + 
-                    #   6.5*GAP*cex + 
-                     #  (scoreMax-0.5) * LINEW * ratio.yx*cex
-               #JUNE10
-			   labels.y <- LINEW*max(ratio.yx, 1.2) + 
-                       6.5*GAP*cex + 0.5 * LINEW * ratio.yx * cex
+                   labels.y <- LINEW*max(ratio.yx, 1.2) + 
+                       6.5*GAP*cex + 
+                       (scoreMax-0.5) * LINEW * ratio.yx*cex
 			   })
         labels.y
     }else{

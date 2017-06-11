@@ -141,20 +141,23 @@ grid.lollipop <- function (x1=.5, y1=.5,
                         lwd=lwd)
                },
            pie.stack={
-               #y0 <- y2+y3+y4+(2*percent$stack.factor.order-1)*radius*ratio.yx
-               #June10
-			   y0 <- y2+y3+y4 + 3*radius*ratio.yx
+               y0 <- y2+y3+y4+(2*percent$stack.factor.order-1)*radius*ratio.yx
+               print(percent$stack.factor.order)
+			   #June10
+			   y0 <- y2+y3+y4+(2*percent$stack.factor.order-2)*radius*ratio.yx
 			   if(side) y0 <- 1 - y0
                grid.pie(x=x2, 
                         y=y0, 
                         radius = radius, 
                         col = col, 
                         border = border, 
-                        percent=percent[, !colnames(percent) %in% 
+				#June10
+						percent=percent[, !colnames(percent) %in% 
                                             c("stack.factor.order", 
                                               "stack.factor.first")],
                         edges=edges,
                         lwd=lwd)
+						print(percent)
                },
            pin={
                y0 <- y2+y3+(this.score-.5)*2*radius*ratio.yx+y4/2

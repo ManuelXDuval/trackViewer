@@ -176,9 +176,10 @@ lolliplot <- function(SNP.gr, features=NULL, ranges=NULL,
                 }
                 scoreMax0 <- max(yaxis, scoreMax0)
             }
-            if(scoreMax>10) {
-                SNPs$score <- 10*SNPs$score/scoreMax
-                scoreMax <- 10*scoreMax0/scoreMax
+			#JUNE12
+            if(scoreMax>20) {
+                SNPs$score <- 20*SNPs$score/scoreMax
+                scoreMax <- 20*scoreMax0/scoreMax
             }else{
                 scoreMax <- scoreMax0
             }
